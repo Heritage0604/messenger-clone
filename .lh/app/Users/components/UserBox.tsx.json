@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/users/components/UserBox.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703158595030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703158623808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import {User} from '@prisma/client'\r\n import { useRouter } from 'next/navigation'\r\n import {useState,useCallback} from \"react\"\r\n import axios from \"axios\"\r\n-import Avatar from \"@app/components/Avatar\"\r\n+import Avatar from \"@app/components/sidebar/Avatar\"\r\n interface UserBoxProps{\r\n     data:User\r\n }\r\n const UserBox:React.FC<UserBoxProps>=({data})=>{\r\n"
+                },
+                {
+                    "date": 1703158717203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import {User} from '@prisma/client'\r\n import { useRouter } from 'next/navigation'\r\n import {useState,useCallback} from \"react\"\r\n import axios from \"axios\"\r\n+import Avatar from '@/app/components/sidebar/Avatar'\r\n \r\n interface UserBoxProps{\r\n     data:User\r\n }\r\n"
+                }
+            ],
+            "date": 1703158595030,
+            "name": "Commit-0",
+            "content": "'use client'\r\nimport {User} from '@prisma/client'\r\nimport { useRouter } from 'next/navigation'\r\nimport {useState,useCallback} from \"react\"\r\nimport axios from \"axios\"\r\nimport Avatar from \"@sp\"\r\ninterface UserBoxProps{\r\n    data:User\r\n}\r\nconst UserBox:React.FC<UserBoxProps>=({data})=>{\r\n    const router =useRouter()\r\n    const[isLoading,setIsLoading]=useState(false)\r\n    const handleClick=useCallback(()=>{\r\n        setIsLoading(true)\r\n        axios.post('/api/conversation',{\r\n            userId:data.id\r\n        }).then((data)=>{\r\n            router.push(`/conversations/${data.data.id}`)\r\n        }).finally(()=>setIsLoading(false))\r\n    },[data,router])\r\n    return(\r\n        <div className='w-full relative flex items-center space-x-3 bg-white\r\n         p-3 hover:bg-neutral-100 rounded-lg transition cursor-pointer' onClick={handleClick}>\r\n            \r\n        <Avatar user={data}/>\r\n\r\n        </div>\r\n    )\r\n}\r\n export default UserBox"
+        }
+    ]
+}

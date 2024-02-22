@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/conversations/components/ConversationList.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703166358920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703167211386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+'use client'\r\n import React from 'react'\r\n-import {Conversation} f\r\n+import {Conversation} from \"@prisma/client\"\r\n interface ConversationListProps{\r\n     initialItems:Conversation[]\r\n }\r\n-const ConversationList = ({conversationList}) => {\r\n+const ConversationList:React.FC = ({conversationList}) => {\r\n   return (\r\n     <div>ConversationList</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1703167220134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+'use client'\r\n import React from 'react'\r\n import {Conversation} from \"@prisma/client\"\r\n interface ConversationListProps{\r\n     initialItems:Conversation[]\r\n }\r\n-const ConversationList = ({conversationList}) => {\r\n+const ConversationList:React.FC<ConversationListProps></ConversationListProps> = ({conversationList}) => {\r\n   return (\r\n     <div>ConversationList</div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1703166358919,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst ConversationList = () => {\r\n  return (\r\n    <div>ConversationList</div>\r\n  )\r\n}\r\n\r\nexport default ConversationList"
+        }
+    ]
+}

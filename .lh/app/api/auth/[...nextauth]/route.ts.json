@@ -1,0 +1,334 @@
+{
+    "sourceFile": "app/api/auth/[...nextauth]/route.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 79,
+            "patches": [
+                {
+                    "date": 1702888954797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702888960271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import \n\\ No newline at end of file\n+import bcry\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888968555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import bcry\n\\ No newline at end of file\n+import bcrypt from 'bcrypt'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888979946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import bcrypt from 'bcrypt'\n\\ No newline at end of file\n+import bcrypt from 'bcrypt'\r\n+import\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888986866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import bcrypt from 'bcrypt'\r\n-import\n\\ No newline at end of file\n+import Next\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888997272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import bcrypt from 'bcrypt'\r\n-import Next\n\\ No newline at end of file\n+import NextAuth,{Au} from 'next-auth/next'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889002879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import bcrypt from 'bcrypt'\r\n-import NextAuth,{Au} from 'next-auth/next'\n\\ No newline at end of file\n+import NextAuth,{AuthOptions} from 'next-auth/next'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889017528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import bcrypt from 'bcrypt'\r\n-import NextAuth,{AuthOptions} from 'next-auth/next'\n\\ No newline at end of file\n+import NextAuth,{AuthOptions} from 'next-auth'\r\n"
+                },
+                {
+                    "date": 1702889066559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n+import Cre\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889072055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n-import Cre\n\\ No newline at end of file\n+import Credent\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889080830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n-import Credent\n\\ No newline at end of file\n+import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n"
+                },
+                {
+                    "date": 1702889087267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n+import Gith\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889104243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n-import Gith\n\\ No newline at end of file\n+import Goog\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889111525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n-import Goog\n\\ No newline at end of file\n+import Google from 'next-auth/providers/google'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889118338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n-import Google from 'next-auth/providers/google'\n\\ No newline at end of file\n+import Google from 'next-auth/providers/google'\r\n+import Github from 'next-auth/providers/github'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889134920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import Google from 'next-auth/providers/google'\r\n-import Github from 'next-auth/providers/github'\n\\ No newline at end of file\n+import GithubProvider from \"next-auth/providers/github\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889145477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n-import Google from 'next-auth/providers/google'\r\n+import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889160293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n-import GithubProvider from \"next-auth/providers/github\"\n\\ No newline at end of file\n+import GithubProvider from \"next-auth/providers/github\"\r\n+import {Pris}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889177963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n import NextAuth,{AuthOptions} from 'next-auth'\r\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n-import {Pris}\n\\ No newline at end of file\n+import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n+import pris\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889185088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n-import pris\n\\ No newline at end of file\n+import prisma from @\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889192412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n-import prisma from @\n\\ No newline at end of file\n+import prisma from '@/app'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889249796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,7 @@\n import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n-import prisma from '@/app'\n\\ No newline at end of file\n+import prisma from '@/app/libs/prismadb'\r\n+\r\n+export const auth\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889260230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n \r\n-export const auth\n\\ No newline at end of file\n+export const authOptions:A\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889378970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,7 @@\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n \r\n-export const authOptions:A\n\\ No newline at end of file\n+export const authOptions:AuthOptions={\r\n+    adapter\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889394836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n \r\n export const authOptions:AuthOptions={\r\n-    adapter\r\n+    adapter:PrismaAdapter(prisma)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889522589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,6 @@\n import prisma from '@/app/libs/prismadb'\r\n \r\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n+    providers\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889529622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n import prisma from '@/app/libs/prismadb'\r\n \r\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n-    providers\r\n+    providers:[\r\n+        GithubProvider\r\n+    ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889536467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,9 @@\n \r\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n-        GithubProvider\r\n+        GithubProvider({\r\n+            clientId\r\n+        })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889541548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n-            clientId\r\n+            clientId:process\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889547390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n-            clientId:process\r\n+            clientId:process.env.GITH\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889552922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n-            clientId:process.env.GITH\r\n+            clientId:process.env.GITHUB_ID a\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889558616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n-            clientId:process.env.GITHUB_ID a\r\n+            clientId:process.env.GITHUB_ID as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889568938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n export const authOptions:AuthOptions={\r\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n-            clientId:process.env.GITHUB_ID as string\r\n+            clientId:process.env.GITHUB_ID as string,\r\n+            client\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889578770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n-            client\r\n+            clientSecret:process.e\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889584751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n-            clientSecret:process.e\r\n+            clientSecret:process.env.GITHUB\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889592855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     adapter:PrismaAdapter(prisma)\r\n     providers:[\r\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n-            clientSecret:process.env.GITHUB\r\n+            clientSecret:process.env.GITHUB_SECRET as str\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889601123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n \r\n export const authOptions:AuthOptions={\r\n-    adapter:PrismaAdapter(prisma)\r\n+    adapter:PrismaAdapter(prisma),\r\n     providers:[\r\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n-            clientSecret:process.env.GITHUB_SECRET as str\r\n+            clientSecret:process.env.GITHUB_SECRET as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889618119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n     providers:[\r\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n             clientSecret:process.env.GITHUB_SECRET as string\r\n-        })\r\n+        }),\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889627324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,9 @@\n         GithubProvider({\r\n             clientId:process.env.GITHUB_ID as string,\r\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         }),\r\n+        GoogleProvider({\r\n+            clientId\r\n+        })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889635687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n             clientId:process.env.GITHUB_ID as string,\r\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         }),\r\n         GoogleProvider({\r\n-            clientId\r\n+            clientId:process.env.GITHUB_ID as string,\r\n+            clientSecret:process.env.GITHUB_SECRET as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889642061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             clientId:process.env.GITHUB_ID as string,\r\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         }),\r\n         GoogleProvider({\r\n-            clientId:process.env.GITHUB_ID as string,\r\n+            clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889647398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         }),\r\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n-            clientSecret:process.env.GITHUB_SECRET as string\r\n+            clientSecret:process.env.GOOGLE_SECRET as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889664646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n             clientSecret:process.env.GITHUB_SECRET as string\r\n         }),\r\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n-            clientSecret:process.env.GOOGLE_SECRET as string\r\n+            clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889677638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n         }),\r\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n-        })\r\n+        }),\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889686278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,7 @@\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n+        CredentialsProvider\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889692111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,9 @@\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n-        CredentialsProvider\r\n+        CredentialsProvider({\r\n+            name\r\n+        })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889697289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n         CredentialsProvider({\r\n-            name\r\n+            name:'credentials'\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889703533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n         CredentialsProvider({\r\n-            name:'credentials'\r\n+            name:'credentials',\r\n+            credentia\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889710854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n         CredentialsProvider({\r\n             name:'credentials',\r\n-            credentia\r\n+            credentials:{\r\n+                email:{}\r\n+            }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889722952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }),\r\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n-                email:{}\r\n+                email:{label:\"email\",type:'text'}\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889764804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n-import { CredentialsProvider } from 'next-auth/providers/credentials'\r\n+import { CredentialsProvider  from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n"
+                },
+                {
+                    "date": 1702889798562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import bcrypt from 'bcrypt'\r\n import NextAuth,{AuthOptions} from 'next-auth'\r\n-import { CredentialsProvider  from 'next-auth/providers/credentials'\r\n+import  CredentialsProvider  from 'next-auth/providers/credentials'\r\n import GoogleProvider from 'next-auth/providers/google'\r\n import GithubProvider from \"next-auth/providers/github\"\r\n import { PrismaAdapter } from '@next-auth/prisma-adapter'\r\n import prisma from '@/app/libs/prismadb'\r\n@@ -16,12 +16,7 @@\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n-        CredentialsProvider({\r\n-            name:'credentials',\r\n-            credentials:{\r\n-                email:{label:\"email\",type:'text'}\r\n-            }\r\n-        })\r\n+        \r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889816507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,13 @@\n         GoogleProvider({\r\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n-        \r\n+        CredentialsProvider({\r\n+            name:'credentials',\r\n+            credentials:{\r\n+                email:{label:\"email\",type:'text'}\r\n+                pass\r\n+            }\r\n+        })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889822128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n-                pass\r\n+                password:{}\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889829850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n-                password:{}\r\n+                password:{label:'password'}\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889835981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n-                password:{label:'password'}\r\n+                password:{label:'password',type:''}\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889842475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n-                password:{label:'password',type:''}\r\n+                password:{label:'password',type:'password'}\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889849269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n                 password:{label:'password',type:'password'}\r\n-            }\r\n+            },\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889862973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n         CredentialsProvider({\r\n+            \r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n                 password:{label:'password',type:'password'}\r\n"
+                },
+                {
+                    "date": 1702889868658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,13 @@\n             clientId:process.env.GOOGLE_ID as string,\r\n             clientSecret:process.env.GOOGLE_CLIENT_SECRET as string\r\n         }),\r\n         CredentialsProvider({\r\n-            \r\n             name:'credentials',\r\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n+            async\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889877247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n             credentials:{\r\n                 email:{label:\"email\",type:'text'}\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n-            async\r\n+            async authorize()\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889885560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }),\r\n         CredentialsProvider({\r\n             name:'credentials',\r\n             credentials:{\r\n-                email:{label:\"email\",type:'text'}\r\n+                email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize()\r\n         })\r\n"
+                },
+                {
+                    "date": 1702889894988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n             credentials:{\r\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n-            async authorize()\r\n+            async authorize(credentials)\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889901888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n             credentials:{\r\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n-            async authorize(credentials)\r\n+            async authorize(credentials){\r\n+                if(!)\r\n+            }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889907698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n-                if(!)\r\n+                if(!credentials?.email)\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889916946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n-                if(!credentials?.email)\r\n+                if(!credentials?.email || !credentials.)\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889932499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n-                if(!credentials?.email || !credentials.)\r\n+                if(!credentials?.email || !credentials?.password)\r\n+                throw\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889942953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n                 if(!credentials?.email || !credentials?.password)\r\n-                throw\r\n+                throw new Error('Invalid Credentials')\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889960111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n                 if(!credentials?.email || !credentials?.password)\r\n-                throw new Error('Invalid Credentials')\r\n+                \r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889981652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n                 email:{label:\"email\",type:'text'},\r\n                 password:{label:'password',type:'password'}\r\n             },\r\n             async authorize(credentials){\r\n-                if(!credentials?.email || !credentials?.password)\r\n-                \r\n+                if(!credentials?.email || !credentials?.password){\r\n+                    throw new Error('Invalid Credentials')\r\n+                }\r\n+              const user = await prisma.user  \r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702889998489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             async authorize(credentials){\r\n                 if(!credentials?.email || !credentials?.password){\r\n                     throw new Error('Invalid Credentials')\r\n                 }\r\n-              const user = await prisma.user  \r\n+              const user = await prisma.user .findUnique \r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890004232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n             async authorize(credentials){\r\n                 if(!credentials?.email || !credentials?.password){\r\n                     throw new Error('Invalid Credentials')\r\n                 }\r\n-              const user = await prisma.user .findUnique \r\n+              const user = await prisma.user .findUnique({\r\n+                where\r\n+              }) \r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890593216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,11 @@\n                 if(!credentials?.email || !credentials?.password){\r\n                     throw new Error('Invalid Credentials')\r\n                 }\r\n               const user = await prisma.user .findUnique({\r\n-                where\r\n+                where:{\r\n+                    email:\r\n+                }\r\n               }) \r\n             }\r\n         })\r\n     ]\r\n"
+                },
+                {
+                    "date": 1702890599419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n                     throw new Error('Invalid Credentials')\r\n                 }\r\n               const user = await prisma.user .findUnique({\r\n                 where:{\r\n-                    email:\r\n+                    email:credentials.email\r\n                 }\r\n               }) \r\n             }\r\n         })\r\n"
+                },
+                {
+                    "date": 1702890611318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n                 where:{\r\n                     email:credentials.email\r\n                 }\r\n               }) \r\n+              \r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890618276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 where:{\r\n                     email:credentials.email\r\n                 }\r\n               }) \r\n-              \r\n+              if(!user )\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890626056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 where:{\r\n                     email:credentials.email\r\n                 }\r\n               }) \r\n-              if(!user )\r\n+              if(!user ||  !user)\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890631293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 where:{\r\n                     email:credentials.email\r\n                 }\r\n               }) \r\n-              if(!user ||  !user)\r\n+              if(!user ||  !user?.hashedPassword)\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702890639303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n                     email:credentials.email\r\n                 }\r\n               }) \r\n               if(!user ||  !user?.hashedPassword){\r\n-                throw\r\n+                throw \r\n               }\r\n             }\r\n         })\r\n     ]\r\n"
+                },
+                {
+                    "date": 1702890920850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n               }) \r\n               if(!user ||  !user?.hashedPassword){\r\n                 throw new Error('Invalid credentials')\r\n               }\r\n-              const isCoree\r\n+              const isCore\r\n             }\r\n         })\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1702888954797,
+            "name": "Commit-0",
+            "content": "import "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "pages/api/pusher/auth.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708606699447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708606699447,
+            "name": "Commit-0",
+            "content": "import { NextApiRequest, NextApiResponse } from \"next\"\r\nimport { getServerSession } from \"next-auth\";\r\n\r\nimport { pusherServer } from \"@/app/libs/pusher\";\r\nimport { authOptions } from \"@/app/api/auth/[...nextauth]/route\";\r\n\r\nexport default async function handler(\r\n  request: NextApiRequest, \r\n  response: NextApiResponse\r\n) {\r\n  const session = await getServerSession(request, response, authOptions);\r\n\r\n  if (!session?.user?.email) {\r\n    return response.status(401);\r\n  }\r\n\r\n  const socketId = request.body.socket_id;\r\n  const channel = request.body.channel_name;\r\n  const data = {\r\n    user_id: session.user.email,\r\n  };\r\n\r\n  const authResponse = pusherServer.authorizeChannel(socketId, channel, data);\r\n  return response.send(authResponse);\r\n};"
+        }
+    ]
+}

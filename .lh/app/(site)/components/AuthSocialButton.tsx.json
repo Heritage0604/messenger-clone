@@ -1,0 +1,46 @@
+{
+    "sourceFile": "app/(site)/components/AuthSocialButton.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1702733450460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702733546890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\r\n+import {}\r\n \r\n const AuthSocialButton = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n"
+                },
+                {
+                    "date": 1702733552070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import {}\r\n+import { IconType } from 'react-icons'\r\n \r\n const AuthSocialButton = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n"
+                },
+                {
+                    "date": 1702734474500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import React from 'react'\r\n import { IconType } from 'react-icons'\r\n \r\n+\r\n+interface\r\n const AuthSocialButton = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702734483945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n import { IconType } from 'react-icons'\r\n \r\n \r\n-interface\r\n+interface AuthSocialButtonProps{\r\n+    \r\n+}\r\n const AuthSocialButton = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702734491807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n import { IconType } from 'react-icons'\r\n \r\n \r\n interface AuthSocialButtonProps{\r\n-    \r\n+idon:I\r\n }\r\n+\r\n const AuthSocialButton = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702734499616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { IconType } from 'react-icons'\r\n \r\n \r\n interface AuthSocialButtonProps{\r\n-idon:IconT\r\n+idon:IconType\r\n }\r\n \r\n const AuthSocialButton = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1702734514142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n idon:IconType;\r\n onClick:()=>void;\r\n }\r\n \r\n-const AuthSocialButton:React.FC = () => {\r\n+const AuthSocialButton:React.FC< = () => {\r\n   return (\r\n     <div>AuthSocialButton</div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1702733450460,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst AuthSocialButton = () => {\r\n  return (\r\n    <div>AuthSocialButton</div>\r\n  )\r\n}\r\n\r\nexport default AuthSocialButton"
+        }
+    ]
+}

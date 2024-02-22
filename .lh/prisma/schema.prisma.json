@@ -1,0 +1,102 @@
+{
+    "sourceFile": "prisma/schema.prisma",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1702740070871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702742348495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,5 @@\n datasource db {\n   provider = \"mongodb\"\n   url      = env(\"DATABASE_URL\")\n }\n+\n"
+                },
+                {
+                    "date": 1702742363529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,7 @@\n   provider = \"mongodb\"\n   url      = env(\"DATABASE_URL\")\n }\n \n+model User{\n+  id  String \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702742379046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String \n+  id  String @id @\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702742384985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String @id @\n+  id  String @id @default(auto)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702742392840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String @id @default(auto)\n+  id  String @id @default(auto()) @\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702742402104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String @id @default(auto()) @\n+  id  String @id @default(auto()) @map(\"_id\")\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702742410529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String @id @default(auto()) @map(\"_id\")\n+  id  String @id @default(auto()) @map(\"_id\") @db.\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745844405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,7 @@\n   url      = env(\"DATABASE_URL\")\n }\n \n model User{\n-  id  String @id @default(auto()) @map(\"_id\") @db.\n+  id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n+  name\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745851539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,7 @@\n }\n \n model User{\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n-  name\n+  name String?\n+  emai\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745857923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n model User{\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n-  emai\n+  email String? \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745865975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n model User{\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n-  email String? \n+  email String? @unique\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745875536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,6 @@\n model User{\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n   email String? @unique\n+  emailVerified\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745881772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n model User{\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n   email String? @unique\n-  emailVerified\n+  emailVerified DateTime?\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745886946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n   email String? @unique\n   emailVerified DateTime?\n+  image\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745894625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,6 @@\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n   email String? @unique\n   emailVerified DateTime?\n-  image\n+  image Stri\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702745902583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,7 @@\n   id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n   name String?\n   email String? @unique\n   emailVerified DateTime?\n-  image Stri\n+  image String?\n+  hashedPassword\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702748202521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,8 @@\n   name String?\n   email String? @unique\n   emailVerified DateTime?\n   image String?\n-  hashedPassword\n+  hashedPassword String?\n+  createdAt\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702748210544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n   email String? @unique\n   emailVerified DateTime?\n   image String?\n   hashedPassword String?\n-  createdAt\n+  createdAt DateTime @def\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702748215977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n   email String? @unique\n   emailVerified DateTime?\n   image String?\n   hashedPassword String?\n-  createdAt DateTime @def\n+  createdAt DateTime @default(now())\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702748225080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n   emailVerified DateTime?\n   image String?\n   hashedPassword String?\n   createdAt DateTime @default(now())\n-  updatedAt\n+  updatedAt \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702748304160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+// This is your Prisma schema file,\n+// learn more about it in the docs: https://pris.ly/d/prisma-schema\n+\n+generator client {\n+  provider = \"prisma-client-js\"\n+}\n+\n+datasource db {\n+  provider = \"mongodb\"\n+  url      = env(\"DATABASE_URL\")\n+}\n+\n+model User{\n+  id  String @id @default(auto()) @map(\"_id\") @db.ObjectId\n+  name String?\n+  email String? @unique\n+  emailVerified DateTime?\n+  image String?\n+  hashedPassword String?\n+  createdAt DateTime @default(now())\n+  updatedAt DateTime @updatedAt\n+\n+  conversationsIds String\n+}\n+\n"
+                }
+            ],
+            "date": 1702740070871,
+            "name": "Commit-0",
+            "content": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider = \"prisma-client-js\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n"
+        }
+    ]
+}

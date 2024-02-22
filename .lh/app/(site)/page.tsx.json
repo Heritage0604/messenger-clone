@@ -1,0 +1,158 @@
+{
+    "sourceFile": "app/(site)/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 35,
+            "patches": [
+                {
+                    "date": 1702714015468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702714026103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n export default function Home() {\r\n   return (\r\n     <div>\r\n-      <p className='text-red-500 text-3xl'>Hello Messenger</p>\r\n+      <p className='text-red-500 text-3xl'>Hell</p>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714099427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n export default function Home() {\r\n   return (\r\n     <div>\r\n-      <p className='text-red-500 text-3xl'>Hell</p>\r\n+      \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714107678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n export default function Home() {\r\n   return (\r\n-    <div>\r\n+    <div className=\"flex\">\r\n       \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714860343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n+import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex\">\r\n-      \r\n+    <div className=\"flex min-h-full flex-col\r\n+     justify-center py-12 sm:px-6 lg:px-8 bg-gray-800\">\r\n+        <p>Hey man </p>\r\n+      <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n+        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n+        <p>Hello world</p>\r\n+      </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714914096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex min-h-full flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-800\">\r\n-        <p>Hey man </p>\r\n+     \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <p>Hello world</p>\r\n+        \r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714983483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-800\">\r\n      \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        \r\n+        <p>Hello world</p>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702714998604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex min-h-full flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-800\">\r\n-     \r\n+        <p>Hey man </p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <p>Hello world</p>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1702715029641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n \r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex min-h-full flex-col\r\n-     justify-center py-12 sm:px-6 lg:px-8 bg-gray-800\">\r\n-        <p>Hey man </p>\r\n+     justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n+        <p>Hey man</p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <p>Hello world</p>\r\n+        <p>Hello world</p>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715037528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         <p>Hey man</p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <p>Hello world</p>\r\n-        <p>Hello world</p>\r\n+        \r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715130381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex min-h-full flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n-        <p>Hey man</p>\r\n+        \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n-        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n+        {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n         \r\n       </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702715145082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex min-h-full flex-col\r\n+    <div className=\"flex h min-h-full flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n"
+                },
+                {
+                    "date": 1702715158498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex h min-h-full flex-col\r\n+    <div className=\"flex  min-h-full flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n"
+                },
+                {
+                    "date": 1702715169658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex  min-h-full flex-col\r\n+    <div className=\"flex h  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n"
+                },
+                {
+                    "date": 1702715175755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex h  flex-col\r\n+    <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n"
+                },
+                {
+                    "date": 1702715182336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n-        {/* <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/> */}\r\n+        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         \r\n       </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702715212469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        \r\n+        <h2></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715218076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <h2></h2>\r\n+        <h2 className=\"mt\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715224613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <h2 className=\"mt\"></h2>\r\n+        <h2 className=\"mt-6 text-center\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715232667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <h2 className=\"mt-6 text-center\"></h2>\r\n+        <h2 className=\"mt-6 text-center text-3xl font\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715240554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <h2 className=\"mt-6 text-center text-3xl font\"></h2>\r\n+        <h2 className=\"mt-6 text-center text-3xl font-bold trac\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715249831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n-        <h2 className=\"mt-6 text-center text-3xl font-bold trac\"></h2>\r\n+        <h2 className=\"mt-6 text-center text-3xl font-bold\r\n+         tracking-tight\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715259616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight\"></h2>\r\n+         tracking-tight text-g\"></h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715265721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-g\"></h2>\r\n+         tracking-tight text-gray-100\">Sign </h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715272199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-gray-100\">Sign </h2>\r\n+         tracking-tight text-gray-100\">Sign in to your account</h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715288370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex h-screen  flex-col\r\n+    <div className=\"flex  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n"
+                },
+                {
+                    "date": 1702715297870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from \"next/image\";\r\n \r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex  flex-col\r\n+    <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n"
+                },
+                {
+                    "date": 1702715307669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n         \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-gray-100\">Sign in to your account</h2>\r\n+         tracking-tight text-gray-100\">\r\n+            Sign in to your account</h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715318337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,15 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n-        \r\n+        <p>Hello world</p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n          tracking-tight text-gray-100\">\r\n-            Sign in to your account</h2>\r\n+            Sign in to your account\r\n+            </h2>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715326852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <p>Hello world</p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-gray-100\">\r\n+         tracking-tight text-black-100\">\r\n             Sign in to your account\r\n             </h2>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1702715332550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <p>Hello world</p>\r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-black-100\">\r\n+         tracking-tight text-gray-100\">\r\n             Sign in to your account\r\n             </h2>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1702715338767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n-        <p>Hello world</p>\r\n+       \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n         <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"mx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n-         tracking-tight text-gray-100\">\r\n+         tracking-tight text-gray-900\">\r\n             Sign in to your account\r\n             </h2>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1702715368163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n          tracking-tight text-gray-900\">\r\n             Sign in to your account\r\n             </h2>\r\n       </div>\r\n+      {/*  */}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715373807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n          tracking-tight text-gray-900\">\r\n             Sign in to your account\r\n             </h2>\r\n       </div>\r\n-      {/*  */}\r\n+      {/* auth form */}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702715716255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div className=\"flex h-screen  flex-col\r\n      justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n        \r\n       <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n-        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\" selemx-auto w-auto\" src={'/images/logo.png'}/>\r\n+        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\" select-nonemx-auto w-auto\" src={'/images/logo.png'}/>\r\n         <h2 className=\"mt-6 text-center text-3xl font-bold\r\n          tracking-tight text-gray-900\">\r\n             Sign in to your account\r\n             </h2>\r\n"
+                },
+                {
+                    "date": 1702715797783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import Image from \"next/image\";\r\n+\r\n+export default function Home() {\r\n+  return (\r\n+    <div className=\"flex h-screen  flex-col\r\n+     justify-center py-12 sm:px-6 lg:px-8 bg-gray-100\">\r\n+       \r\n+      <div className=\"sm:mx-auto sm:w-full sm:max-w-md\">\r\n+        <Image alt=\"logo\" height=\"48\" width=\"48\" className=\"  mx-auto w-auto\" src={'/images/logo.png'}/>\r\n+        <h2 className=\"mt-6 text-center text-3xl font-bold\r\n+         tracking-tight text-gray-900\">\r\n+            Sign in to your account\r\n+            </h2>\r\n+      </div>\r\n+      {/* auth form */}\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1702714015468,
+            "name": "Commit-0",
+            "content": "\r\nexport default function Home() {\r\n  return (\r\n    <div>\r\n      <p className='text-red-500 text-3xl'>Hello Messenger</p>\r\n    </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

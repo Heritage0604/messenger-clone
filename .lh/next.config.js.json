@@ -1,0 +1,26 @@
+{
+    "sourceFile": "next.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703085956556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703086962572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,6 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n-    experimental:{\n-        swcPlugins:[\n-            [\"next-superjson-plugin\",{}]\n-        ]\n-    }\n+    \n }\n \n module.exports = nextConfig\n"
+                },
+                {
+                    "date": 1703087284885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n-    \n+    experimental:{\n+        swcPlugins:[\n+            [\"next-superjson-plugin\",{}]\n+        ]\n+    }\n }\n \n module.exports = nextConfig\n"
+                }
+            ],
+            "date": 1703085956556,
+            "name": "Commit-0",
+            "content": "/** @type {import('next').NextConfig} */\nconst nextConfig = {\n    experimental:{\n        swcPlugins:[\n            [\"next-superjson-plugin\",{}]\n        ]\n    }\n}\n\nmodule.exports = nextConfig\n"
+        }
+    ]
+}

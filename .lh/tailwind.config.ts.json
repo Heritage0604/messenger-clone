@@ -1,0 +1,34 @@
+{
+    "sourceFile": "tailwind.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1702713849069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702720063168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,9 @@\n     extend: {\n      \n     },\n   },\n-  plugins: [],\n+  plugins: [\n+    require()\n+  ],\n }\n export default config\n"
+                },
+                {
+                    "date": 1702720070706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n      \n     },\n   },\n   plugins: [\n-    require()\n+    require(\"@tailwindcss/forms\")\n   ],\n }\n export default config\n"
+                },
+                {
+                    "date": 1702720076252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n      \n     },\n   },\n   plugins: [\n-    require(\"@tailwindcss/forms\")\n+    require(\"@tailwindcss/forms\"){}\n   ],\n }\n export default config\n"
+                },
+                {
+                    "date": 1702720083991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n      \n     },\n   },\n   plugins: [\n-    require(\"@tailwindcss/forms\"){}\n+    require(\"@tailwindcss/forms\")({\n+      strategy\n+    })\n   ],\n }\n export default config\n"
+                }
+            ],
+            "date": 1702713849069,
+            "name": "Commit-0",
+            "content": "import type { Config } from 'tailwindcss'\n\nconst config: Config = {\n  content: [\n    './pages/**/*.{js,ts,jsx,tsx,mdx}',\n    './components/**/*.{js,ts,jsx,tsx,mdx}',\n    './app/**/*.{js,ts,jsx,tsx,mdx}',\n  ],\n  theme: {\n    extend: {\n     \n    },\n  },\n  plugins: [],\n}\nexport default config\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/components/sidebar/DesktopItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1703075811038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703075850232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+\r\n+type DesktopItemProps={\r\n+    \r\n+}\r\n+const DesktopItem = () => {\r\n+  return (\r\n+    <div>DesktopItem</div>\r\n+  )\r\n+}\r\n+\r\n+export default DesktopItem\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703076009839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+\\\r\n+\r\n import React from 'react'\r\n \r\n \r\n type DesktopItemProps={\r\n-    \r\n+\r\n }\r\n const DesktopItem = () => {\r\n   return (\r\n     <div>DesktopItem</div>\r\n"
+                },
+                {
+                    "date": 1703076016849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\\\r\n+'use client'\r\n \r\n import React from 'react'\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1703076032348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n-import clsx\r\n+import clsx \r\n \r\n \r\n type DesktopItemProps={\r\n \r\n"
+                },
+                {
+                    "date": 1703076068642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n import Link from \"next/link\"\r\n \r\n \r\n type DesktopItemProps={\r\n-\r\n+label:string\r\n+icon :\r\n }\r\n const DesktopItem = () => {\r\n   return (\r\n     <div>DesktopItem</div>\r\n"
+                }
+            ],
+            "date": 1703075811038,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "sourceFile": "app/hooks/useRoute.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1703073933704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703073959905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import { useMemo } from \"react\";\n\\ No newline at end of file\n+import { useMemo } from \"react\";\r\n+import {useParams} from \"next/navigations\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074005262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import { useMemo } from \"react\";\r\n-import {useParams} from \"next/navigations\"\n\\ No newline at end of file\n+import {useParams} from \"next/navigation\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074044347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n import { useMemo } from \"react\";\r\n-import {useParams} from \"next/navigation\"\n\\ No newline at end of file\n+import {useParams} from \"next/navigation\"\r\n+import {Hi}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074060127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {Hi}\n\\ No newline at end of file\n+import {HiChat} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074072011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {HiChat} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiChat,Hi} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074089331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {HiChat,Hi} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiChat,HiArrow} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074097790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {HiChat,HiArrow} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiChat,HiArrowLeft} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074164084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {HiChat,HiArrowLeft} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiChat,} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074173469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n-import {HiChat,} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiChat} from \"react-icons/hi\"\r\n+import {HiArrowLeft} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074178950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n import {HiChat} from \"react-icons/hi\"\r\n-import {HiArrowLeft} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiArrowLeftOnRectanglr} from \"react-icons/hi\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074198268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n import {HiChat} from \"react-icons/hi\"\r\n-import {HiArrowLeftOnRectanglr} from \"react-icons/hi\"\n\\ No newline at end of file\n+import {HiArrowLeftOnRectangle} from \"react-icons/hi2\"\r\n"
+                },
+                {
+                    "date": 1703074219067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n import {HiChat} from \"react-icons/hi\"\r\n-import {HiArrowLeftOnRectangle} from \"react-icons/hi2\"\r\n+import {HiArrowLeftOnRectangle}, from \"react-icons/hi2\"\r\n"
+                },
+                {
+                    "date": 1703074236644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n import { useMemo } from \"react\";\r\n import {useParams} from \"next/navigation\"\r\n import {HiChat} from \"react-icons/hi\"\r\n import {HiArrowLeftOnRectangle,HiUsers} from \"react-icons/hi2\"\r\n+import {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074306942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useMemo } from \"react\";\r\n-import {useParams} from \"next/navigation\"\r\n+import {useParams, usePathname} from \"next/navigation\"\r\n import {HiChat} from \"react-icons/hi\"\r\n import {HiArrowLeftOnRectangle,HiUsers} from \"react-icons/hi2\"\r\n import { signOut } from \"next-auth/react\";\r\n import useConversation from \"./useConversation\";\r\n"
+                }
+            ],
+            "date": 1703073933704,
+            "name": "Commit-0",
+            "content": "import { useMemo } from \"react\";"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/components/EmptyState.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1702915538573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702915657591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n \r\n const EmptyState = () => {\r\n   return (\r\n-    <div class>EmptyState</div>\r\n+    <div className='\r\n+    '>EmptyState</div>\r\n   )\r\n }\r\n \r\n export default EmptyState\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702915674251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const EmptyState = () => {\r\n   return (\r\n-    <div className='px-4 py-10 sm:px'>EmptyState</div>\r\n+    <div className='px-4 py-10 sm:px-6'>EmptyState</div>\r\n   )\r\n }\r\n \r\n export default EmptyState\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1702915538573,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst EmptyState = () => {\r\n  return (\r\n    <div>EmptyState</div>\r\n  )\r\n}\r\n\r\nexport default EmptyState"
+        }
+    ]
+}

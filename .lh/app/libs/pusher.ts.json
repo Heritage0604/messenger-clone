@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/libs/pusher.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708606817223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708606817223,
+            "name": "Commit-0",
+            "content": "import PusherServer from \"pusher\"\r\nimport PusherClient from 'pusher-js'\r\n\r\nexport const pusherServer=new PusherServer({\r\n    appId:process.env.PUSHER_APP_ID!,\r\n    key:process.env.NEXT_PUBLIC_PUSHER_APP_KEY!,\r\n    secret:process.env.PUSHER_SECRET!,\r\n    cluster:'eu',\r\n    useTLS:true\r\n\r\n})\r\n\r\nexport const pusherClient = new PusherClient(\r\n  process.env.NEXT_PUBLIC_PUSHER_APP_KEY!,\r\n  {\r\n    channelAuthorization: {\r\n      endpoint: '/api/pusher/auth',\r\n      transport: 'ajax',\r\n    },\r\n    cluster: 'eu',\r\n  }\r\n);"
+        }
+    ]
+}

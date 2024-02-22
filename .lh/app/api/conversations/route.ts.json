@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/api/conversations/route.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1703159172657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703159202861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import getC\n\\ No newline at end of file\n+import getCurrentUser from \"@/app/actions/getCurrentUser\";\r\n+import { NextResponse } from \"next/server\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703159212388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n import getCurrentUser from \"@/app/actions/getCurrentUser\";\r\n-import { NextResponse } from \"next/server\";\n\\ No newline at end of file\n+import { NextResponse } from \"next/server\";\r\n+import prisma from \"@/app/l\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703159227929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import getCurrentUser from \"@/app/actions/getCurrentUser\";\r\n import { NextResponse } from \"next/server\";\r\n import prisma from \"@/app/libs/prismadb\"\r\n \r\n-as\n\\ No newline at end of file\n+exo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703159244496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import getCurrentUser from \"@/app/actions/getCurrentUser\";\r\n import { NextResponse } from \"next/server\";\r\n import prisma from \"@/app/libs/prismadb\"\r\n \r\n-export async function POST(request:Re)\n\\ No newline at end of file\n+export async function POST(request:Reque)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703159172657,
+            "name": "Commit-0",
+            "content": "import getC"
+        }
+    ]
+}

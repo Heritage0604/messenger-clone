@@ -1,0 +1,66 @@
+{
+    "sourceFile": "app/components/inputs/Button.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1702730020326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702730059465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-const Button = () => {\r\n+const Button = ({children}) => {\r\n   return (\r\n     <div>Button</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1702730078611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,1 @@\n-import React from 'react'\r\n-\r\n-const Button = ({children}) => {\r\n-  return (\r\n-    <div>Button</div>\r\n-  )\r\n-}\r\n-\r\n-export default Button\n\\ No newline at end of file\n+rafce\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702730085529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,10 @@\n-rafce\n\\ No newline at end of file\n+\r\n+import React from 'react'\r\n+\r\n+const Button = () => {\r\n+  return (\r\n+    <div>Button</div>\r\n+  )\r\n+}\r\n+\r\n+export default Button\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702730099223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n-\r\n+'use client'\r\n import React from 'react'\r\n+import clsx from 'clsx'\r\n \r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731252092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n+interface\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702731258164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n-interface\r\n+interface ButtonProps{\r\n+    \r\n+}\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702731263486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n interface ButtonProps{\r\n-    \r\n+    type:\"\"\r\n }\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731270543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n interface ButtonProps{\r\n-    type:\"\"\r\n+    type:\"button\"|\"submit\"\r\n }\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731277596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n interface ButtonProps{\r\n-    type:\"button\"|\"submit\"\r\n+    type:\"button\"|\"submit\"|\"reset\"|iu\r\n }\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731287531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import React from 'react'\r\n import clsx from 'clsx'\r\n \r\n interface ButtonProps{\r\n-    type:\"button\"|\"submit\"|\"reset\"|iu\r\n+    type:\"button\"|\"submit\"|\"reset\"|undefined\r\n+    f\r\n }\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731293474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import clsx from 'clsx'\r\n \r\n interface ButtonProps{\r\n     type:\"button\"|\"submit\"|\"reset\"|undefined\r\n-    fullWidth\r\n+    fullWidth:\r\n }\r\n const Button = () => {\r\n   return (\r\n     <div>Button</div>\r\n"
+                },
+                {
+                    "date": 1702731317807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+'use client'\r\n+import React from 'react'\r\n+import clsx from 'clsx'\r\n+\r\n+interface ButtonProps{\r\n+    type:\"button\"|\"submit\"|\"reset\"|undefined;\r\n+    fullWidth:boolean;\r\n+    children?:React.Rea\r\n+}\r\n+const Button = () => {\r\n+  return (\r\n+    <div>Button</div>\r\n+  )\r\n+}\r\n+\r\n+export default Button\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1702730020326,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Button = () => {\r\n  return (\r\n    <div>Button</div>\r\n  )\r\n}\r\n\r\nexport default Button"
+        }
+    ]
+}

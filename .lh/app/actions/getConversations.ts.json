@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/actions/getConversations.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703166429413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703166438326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import prisma from \"@/app/lib\"\n\\ No newline at end of file\n+import prisma from \"@/app/lib/\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703166451303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n import prisma from \"@/app/libs/prismadb\"\r\n+import getCurrentUser\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703166429413,
+            "name": "Commit-0",
+            "content": "import prisma from "
+        }
+    ]
+}

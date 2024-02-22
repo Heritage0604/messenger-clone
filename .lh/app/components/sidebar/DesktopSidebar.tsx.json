@@ -1,0 +1,46 @@
+{
+    "sourceFile": "app/components/sidebar/DesktopSidebar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1702916683066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703074929000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+\r\n+\r\n+import React from 'react'\r\n+\r\n+const DesktopSidebar = () => {\r\n+  return (\r\n+    <div>DesktopSidebar</div>\r\n+  )\r\n+}\r\n+\r\n+export default DesktopSidebar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703074935521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+'use client'\r\n \r\n-\r\n import React from 'react'\r\n \r\n const DesktopSidebar = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1703074956817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n import React from 'react'\r\n \r\n const DesktopSidebar = () => {\r\n+  const routes=useRoutes()\r\n   return (\r\n     <div>DesktopSidebar</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1703074979664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n+imporyt \"\r\n \r\n const DesktopSidebar = () => {\r\n   const routes=useRoutes()\r\n   return (\r\n"
+                },
+                {
+                    "date": 1703074985327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n-imporyt \"\r\n+imporyt \"@/app/hooks/use\r\n \r\n const DesktopSidebar = () => {\r\n   const routes=useRoutes()\r\n   return (\r\n"
+                },
+                {
+                    "date": 1703075003080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n-import useRoy \"@/app/hooks/useRoutes\"\r\n+import useRou \"@/app/hooks/useRoutes\"\r\n \r\n const DesktopSidebar = () => {\r\n   const routes=useRoutes()\r\n   return (\r\n"
+                },
+                {
+                    "date": 1703075017653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n \r\n import React from 'react'\r\n-import useRoutes from '@/app/hooks/useRoute' \"@/app/hooks/useRoutes\"\r\n+import useRoutes from '@/app/hooks/useRoute' \r\n \r\n const DesktopSidebar = () => {\r\n   const routes=useRoutes()\r\n   return (\r\n"
+                }
+            ],
+            "date": 1702916683066,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

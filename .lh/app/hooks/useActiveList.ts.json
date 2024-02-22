@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/hooks/useActiveList.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708607375785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708607375784,
+            "name": "Commit-0",
+            "content": "import { create } from 'zustand'\r\n\r\ninterface ActiveListStore {\r\n  members: string[];\r\n  add: (id: string) => void;\r\n  remove: (id: string) => void;\r\n  set: (ids: string[]) => void;\r\n}\r\n\r\nconst useActiveList = create<ActiveListStore>((set) => ({\r\n  members: [],\r\n  add: (id) => set((state) => ({ members: [...state.members, id] })),\r\n  remove: (id) => set((state) => ({ members: state.members.filter((memberId) => memberId !== id) })),\r\n  set: (ids) => set({ members: ids })\r\n}));\r\n\r\nexport default useActiveList;"
+        }
+    ]
+}

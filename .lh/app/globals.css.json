@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/globals.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1702713629106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702713642737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n :root {\n   --foreground-rgb: 0, 0, 0;\n   --background-start-rgb: 214, 219, 220;\n-  /* --background-end-rgb: 255, 255, 255; */\n+  --background-end-rgb: 255, 255, 255;\n }\n \n @media (prefers-color-scheme: dark) {\n   :root {\n"
+                },
+                {
+                    "date": 1702713710470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,5 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n-:root {\n-  --foreground-rgb: 0, 0, 0;\n-  --background-start-rgb: 214, 219, 220;\n-  --background-end-rgb: 255, 255, 255;\n-}\n \n-@media (prefers-color-scheme: dark) {\n-  :root {\n-    --foreground-rgb: 255, 255, 255;\n-    --background-start-rgb: 0, 0, 0;\n-    --background-end-rgb: 0, 0, 0;\n-  }\n-}\n-\n-body {\n-  color: rgb(var(--foreground-rgb));\n-  background: linear-gradient(\n-      to bottom,\n-      transparent,\n-      rgb(var(--background-end-rgb))\n-    )\n-    rgb(var(--background-start-rgb));\n-}\n"
+                },
+                {
+                    "date": 1702713797125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n-\n+html,body,root\n"
+                },
+                {
+                    "date": 1702713812538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n-html,body,root\n+html,body:root{\n+    height: 100;\n+}\n"
+                }
+            ],
+            "date": 1702713629106,
+            "name": "Commit-0",
+            "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n:root {\n  --foreground-rgb: 0, 0, 0;\n  --background-start-rgb: 214, 219, 220;\n  /* --background-end-rgb: 255, 255, 255; */\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --foreground-rgb: 255, 255, 255;\n    --background-start-rgb: 0, 0, 0;\n    --background-end-rgb: 0, 0, 0;\n  }\n}\n\nbody {\n  color: rgb(var(--foreground-rgb));\n  background: linear-gradient(\n      to bottom,\n      transparent,\n      rgb(var(--background-end-rgb))\n    )\n    rgb(var(--background-start-rgb));\n}\n"
+        }
+    ]
+}

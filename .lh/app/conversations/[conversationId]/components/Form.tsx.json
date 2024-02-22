@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/conversations/[conversationId]/components/Form.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708606983565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708606983565,
+            "name": "Commit-0",
+            "content": "'use client';\r\n\r\nimport { \r\n  HiPaperAirplane, \r\n  HiPhoto\r\n} from \"react-icons/hi2\";\r\nimport MessageInput from \"./MessageInput\";\r\nimport { \r\n  FieldValues, \r\n  SubmitHandler, \r\n  useForm \r\n} from \"react-hook-form\";\r\nimport axios from \"axios\";\r\nimport { CldUploadButton } from \"next-cloudinary\";\r\nimport useConversation from \"@/app/hooks/useConversation\";\r\n\r\nconst Form = () => {\r\n  const { conversationId } = useConversation();\r\n\r\n  const {\r\n    register,\r\n    handleSubmit,\r\n    setValue,\r\n    formState: {\r\n      errors,\r\n    }\r\n  } = useForm<FieldValues>({\r\n    defaultValues: {\r\n      message: ''\r\n    }\r\n  });\r\n\r\n  const onSubmit: SubmitHandler<FieldValues> = (data) => {\r\n    setValue('message', '', { shouldValidate: true });\r\n    axios.post('/api/messages', {\r\n      ...data,\r\n      conversationId: conversationId\r\n    }).finally(()=>{\r\n      window.scrollTo({\r\n    top: document.documentElement.scrollHeight,\r\n    behavior: 'smooth'\r\n  });\r\n    })\r\n    \r\n  }\r\n\r\n  const handleUpload = (result: any) => {\r\n    axios.post('/api/messages', {\r\n      image: result.info.secure_url,\r\n      conversationId: conversationId\r\n    }).finally(()=>{\r\n       window.scrollTo({\r\n    top: document.documentElement.scrollHeight,\r\n    behavior: 'smooth'\r\n  });\r\n    })\r\n   \r\n  }\r\n\r\n  return ( \r\n    <div \r\n      className=\"\r\n      fixed\r\n       bottom-0\r\n        py-4 \r\n        px-4 \r\n        bg-white \r\n        border-t \r\n        flex \r\n        items-center \r\n        gap-2 \r\n        lg:gap-4 \r\n        w-full\r\n      \"\r\n    >\r\n      <CldUploadButton \r\n        options={{ maxFiles: 1 }} \r\n        onUpload={handleUpload} \r\n        uploadPreset=\"mo2muu0p\"\r\n      >\r\n        <HiPhoto size={30} className=\"text-sky-500\" />\r\n      </CldUploadButton>\r\n      <form \r\n        onSubmit={handleSubmit(onSubmit)} \r\n        className=\"flex items-center gap-2 lg:gap-4 w-full\"\r\n      >\r\n        <MessageInput \r\n          id=\"message\" \r\n          register={register} \r\n          errors={errors} \r\n          required \r\n          placeholder=\"Write a message\"\r\n        />\r\n        <button \r\n          type=\"submit\" \r\n          className=\"\r\n            rounded-full \r\n            p-2 \r\n            bg-sky-500 \r\n            cursor-pointer \r\n            hover:bg-sky-600 \r\n            transition\r\n          \"\r\n        >\r\n          <HiPaperAirplane\r\n            size={18}\r\n            className=\"text-white\"\r\n          />\r\n        </button>\r\n      </form>\r\n    </div>\r\n  );\r\n}\r\n \r\nexport default Form;"
+        }
+    ]
+}

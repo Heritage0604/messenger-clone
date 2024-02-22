@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/components/sidebar/MobileItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1703079378483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703079393572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,14 @@\n import React from 'react'\r\n \r\n const MobileItem = () => {\r\n+    type DesktopItemProps={\r\n+label:string\r\n+icon : any\r\n+href:string\r\n+onClick?:()=>void;\r\n+active?:boolean\r\n+}\r\n   return (\r\n     <div>MobileItem</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1703079398940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n \r\n const MobileItem = () => {\r\n-    type DesktopItemProps={\r\n+    type MobileItemProps={\r\n label:string\r\n icon : any\r\n href:string\r\n onClick?:()=>void;\r\n"
+                },
+                {
+                    "date": 1703079415891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-const MobileItem = () => {\r\n+const MobileItem = ({label,icon:Icon,href,onClick,active}) => {\r\n     type MobileItemProps={\r\n label:string\r\n icon : any\r\n href:string\r\n"
+                },
+                {
+                    "date": 1703079425058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n label:string\r\n icon : any\r\n href:string\r\n onClick?:()=>void;\r\n-active?:boolean\r\n+ac\r\n+tive?:boolean\r\n }\r\n const MobileItem = ({label,icon:Icon,href,onClick,active}) => {\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1703080602213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   }\r\n   return (\r\n      \r\n <Link href={href} className={clsx(`\r\n-    group flex gap-x-3 rounded-md p-4 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n+    group flex gap-x-3 rounded-md p-2.5 text-sm leading-6 font-semibold text-gray-500 hover:text-black hover:bg-gray-100\r\n `,active && \"bg-gray-100 text-black\")}>\r\n   <Icon className='h-6 w-6 shrink-0'/>\r\n     <span className='sr-only'>{label}</span>\r\n </Link>\r\n"
+                }
+            ],
+            "date": 1703079378482,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst MobileItem = () => {\r\n  return (\r\n    <div>MobileItem</div>\r\n  )\r\n}\r\n\r\nexport default MobileItem"
+        }
+    ]
+}

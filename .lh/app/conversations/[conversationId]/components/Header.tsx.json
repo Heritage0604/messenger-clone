@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/conversations/[conversationId]/components/Header.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1708608675734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708608706028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n \r\n const Header:React.FC<HeaderProps> = ({conversation}) => {\r\n     const otherUser=useOtherUser(conversation)\r\n     const[drawerOpen,setDrawerOpen]=useState(false)\r\n+\r\n+    \r\n     const statusText=useMemo(()=>{\r\n if(conversation.isGroup){\r\n     return `${conversation.users.length} members`\r\n }\r\n"
+                },
+                {
+                    "date": 1708608733256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,15 +18,18 @@\n const Header:React.FC<HeaderProps> = ({conversation}) => {\r\n     const otherUser=useOtherUser(conversation)\r\n     const[drawerOpen,setDrawerOpen]=useState(false)\r\n \r\n-    \r\n-    const statusText=useMemo(()=>{\r\n-if(conversation.isGroup){\r\n-    return `${conversation.users.length} members`\r\n-}\r\n-return `Active`\r\n-    },[conversation])\r\n+\r\n+  const { members } = useActiveList();\r\n+  const isActive = members.indexOf(otherUser?.email!) !== -1;\r\n+  const statusText = useMemo(() => {\r\n+    if (conversation.isGroup) {\r\n+      return `${conversation.users.length} members`;\r\n+    }\r\n+\r\n+    return isActive ? 'Active' : 'Offline'\r\n+  }, [conversation, isActive]);\r\n   return (\r\n     <>\r\n     <ProfileDrawer  isOpen={drawerOpen} data={conversation} onClose={()=>setDrawerOpen(false)}/>\r\n \r\n"
+                },
+                {
+                    "date": 1708608862402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,10 @@\n     }\r\n \r\n     return isActive ? 'Active' : 'Offline'\r\n   }, [conversation, isActive]);\r\n+\r\n+  \r\n   return (\r\n     <>\r\n     <ProfileDrawer  isOpen={drawerOpen} data={conversation} onClose={()=>setDrawerOpen(false)}/>\r\n \r\n"
+                }
+            ],
+            "date": 1708608675734,
+            "name": "Commit-0",
+            "content": "'use client'\r\nimport React,{useMemo,useState} from 'react'\r\nimport { Conversation,User } from '@prisma/client'\r\nimport useOtherUser from \"@/app/hooks/useOtherUser\"\r\nimport Link from 'next/link'\r\nimport {HiChevronLeft,HiEllipsisHorizontal} from \"react-icons/hi2\"\r\nimport Avatar from '@/app/components/sidebar/Avatar'\r\nimport ProfileDrawer from \"./ProfileDrawer\"\r\nimport  AvatarGroup from \"@/app/components/sidebar/AvatarGroup\"\r\nimport useActiveList from \"@/app/hooks/useActiveList\";\r\n\r\ninterface HeaderProps{\r\n    conversation:Conversation &{\r\n        users:User[]\r\n    }\r\n}\r\n\r\nconst Header:React.FC<HeaderProps> = ({conversation}) => {\r\n    const otherUser=useOtherUser(conversation)\r\n    const[drawerOpen,setDrawerOpen]=useState(false)\r\n    const statusText=useMemo(()=>{\r\nif(conversation.isGroup){\r\n    return `${conversation.users.length} members`\r\n}\r\nreturn `Active`\r\n    },[conversation])\r\n  return (\r\n    <>\r\n    <ProfileDrawer  isOpen={drawerOpen} data={conversation} onClose={()=>setDrawerOpen(false)}/>\r\n\r\n     <div className='sticky top-0 z-50'>\r\n      <div \r\n      className=\"\r\n    \r\n      z-50\r\n        bg-white \r\n        w-full\r\n        flex \r\n        border-b-[1px] \r\n        sm:px-6\r\n        py-4 \r\n        px-6\r\n        lg:px-4 \r\n        justify-between\r\n        items-center \r\n        shadow-sm\r\n      \"\r\n    >\r\n      <div className=\"flex gap-3 items-center\">\r\n        <Link\r\n          href=\"/conversations\" \r\n          className=\"\r\n            lg:hidden \r\n            block \r\n            text-sky-500 \r\n            hover:text-sky-600 \r\n            transition \r\n            cursor-pointer\r\n          \"\r\n        >\r\n          <HiChevronLeft size={32} />\r\n        </Link>\r\n        {conversation.isGroup ? (\r\n          <AvatarGroup users={conversation.users} />\r\n        ) : (\r\n          <Avatar user={otherUser} />\r\n        )}\r\n       \r\n        <div className=\"flex flex-col\">\r\n          <div>{conversation.name || otherUser.name}</div>\r\n          <div className=\"text-sm font-light text-neutral-500\">\r\n            {statusText}\r\n          </div>\r\n        </div>\r\n\r\n        \r\n\r\n      </div>\r\n\r\n      \r\n      \r\n      <HiEllipsisHorizontal\r\n        size={32}\r\n        onClick={() => setDrawerOpen(true)}\r\n        className=\"\r\n        \r\n          text-sky-500\r\n          cursor-pointer\r\n          hover:text-sky-600\r\n          transition\r\n        \"\r\n      />\r\n    </div>\r\n     </div>\r\n    </>\r\n  );\r\n}\r\n \r\nexport default Header;"
+        }
+    ]
+}

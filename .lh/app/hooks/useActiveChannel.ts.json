@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/hooks/useActiveChannel.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708607656213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708607656212,
+            "name": "Commit-0",
+            "content": "import { useEffect, useState } from \"react\";\r\nimport { pusherClient } from \"../libs/pusher\";\r\nimport { Channel, Members } from \"pusher-js\";\r\nimport useActiveList from \"./useActiveList\";\r\n\r\nconst useActiveChannel = () => {\r\n  const { set, add, remove } = useActiveList();\r\n  const [activeChannel, setActiveChannel] = useState<Channel | null>(null);\r\n\r\n  useEffect(() => {\r\n    let channel = activeChannel;\r\n\r\n    if (!channel) {\r\n      channel = pusherClient.subscribe('presence-messenger');\r\n      setActiveChannel(channel);\r\n    }\r\n\r\n    channel.bind(\"pusher:subscription_succeeded\", (members: Members) => {\r\n      const initialMembers: string[] = [];\r\n\r\n      members.each((member: Record<string, any>) => initialMembers.push(member.id));\r\n      set(initialMembers);\r\n    });\r\n\r\n    channel.bind(\"pusher:member_added\", (member: Record<string, any>) => {\r\n      add(member.id)\r\n    });\r\n\r\n    channel.bind(\"pusher:member_removed\", (member: Record<string, any>) => {\r\n      remove(member.id);\r\n    });\r\n\r\n    return () => {\r\n      if (activeChannel) {\r\n        pusherClient.unsubscribe('presence-messenger');\r\n        setActiveChannel(null);\r\n      }\r\n    }\r\n  }, [activeChannel, set, add, remove]);\r\n}\r\n\r\nexport default useActiveChannel;"
+        }
+    ]
+}

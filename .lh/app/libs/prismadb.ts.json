@@ -1,0 +1,78 @@
+{
+    "sourceFile": "app/libs/prismadb.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1702888670538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702888686338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import {Pris}\n\\ No newline at end of file\n+import { PrismaClient } from \"@prisma/client\";\r\n+const client = glo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888692505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import { PrismaClient } from \"@prisma/client\";\r\n-const client = glo\n\\ No newline at end of file\n+const client = globalThis.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888697920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import { PrismaClient } from \"@prisma/client\";\r\n-const client = globalThis.\n\\ No newline at end of file\n+const client = globalThis.prisma || new\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888703927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import { PrismaClient } from \"@prisma/client\";\r\n-const client = globalThis.prisma || new\n\\ No newline at end of file\n+const client = globalThis.prisma || new PrismaClient()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888715787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n import { PrismaClient } from \"@prisma/client\";\r\n-const client = globalThis.prisma || new PrismaClient()\n\\ No newline at end of file\n+const client = globalThis.prisma || new PrismaClient();\r\n+if\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888721455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n-if\n\\ No newline at end of file\n+if(process.env)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888730791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n-if(process.env)\n\\ No newline at end of file\n+if(process.env.NODE_ENV !=== '')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888737306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n-if(process.env.NODE_ENV !=== '')\n\\ No newline at end of file\n+if(process.env.NODE_ENV !=== 'production'){\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888744652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n-    \r\n+    globalThis.pr\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888752665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n-    globalThis.pr\r\n+    globalThis.prisma = client\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888760389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import { PrismaClient } from \"@prisma/client\";\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n     globalThis.prisma = client\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+export default client\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702888768226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { PrismaClient } from \"@prisma/client\";\r\n+declare\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n     globalThis.prisma = client\r\n }\r\n"
+                },
+                {
+                    "date": 1702888774889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import { PrismaClient } from \"@prisma/client\";\r\n-declare\r\n+declare global{\r\n+    var prisma\r\n+}\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n     globalThis.prisma = client\r\n }\r\n"
+                },
+                {
+                    "date": 1702888780326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { PrismaClient } from \"@prisma/client\";\r\n declare global{\r\n-    var prisma\r\n+    var prisma :PrismaClient\r\n }\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n     globalThis.prisma = client\r\n"
+                },
+                {
+                    "date": 1702888791643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { PrismaClient } from \"@prisma/client\";\r\n declare global{\r\n-    var prisma :PrismaClient\r\n+    var prisma :PrismaClient | undefined\r\n }\r\n const client = globalThis.prisma || new PrismaClient();\r\n if(process.env.NODE_ENV !=== 'production'){\r\n     globalThis.prisma = client\r\n"
+                }
+            ],
+            "date": 1702888670538,
+            "name": "Commit-0",
+            "content": "import {Pris}"
+        }
+    ]
+}

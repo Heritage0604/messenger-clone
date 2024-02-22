@@ -1,0 +1,46 @@
+{
+    "sourceFile": "app/conversations/components/GroupChatModal.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1708287004692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708287036145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n 'use client'\r\n import {User} from \"@prisma/client\"\r\n import {useRouter} from \"next/navigation\"\r\n import {useState} from 'react'\r\n-import {useForm,FieldValues,Su} from \"react-hook-form\"\r\n+import {useForm,FieldValues,SubmitHandler} from \"react-hook-form\"\r\n \r\n interface GroupChatModalProps{\r\n     isOpen:boolean\r\n     onClose:()=>void\r\n@@ -29,9 +29,13 @@\n      })\r\n \r\n      const members=watch('members')\r\n \r\n-     const onSubmit:SubmitHandler\r\n+     const onSubmit:SubmitHandler<FieldValues>=(data)=>{\r\n+        setIsLoading(true)\r\n+        \r\n+\r\n+     }\r\n return(\r\n     <div>\r\n         Hello world\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1708287054721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,19 +22,19 @@\n         errors\r\n      }}=useForm<FieldValues>\r\n      ({\r\n         defaultValues:{\r\n-            names:''\r\n+            names:'',\r\n             members:[]\r\n         }\r\n      })\r\n \r\n      const members=watch('members')\r\n \r\n      const onSubmit:SubmitHandler<FieldValues>=(data)=>{\r\n         setIsLoading(true)\r\n-        \r\n \r\n+\r\n      }\r\n return(\r\n     <div>\r\n         Hello world\r\n"
+                },
+                {
+                    "date": 1708287062551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         errors\r\n      }}=useForm<FieldValues>\r\n      ({\r\n         defaultValues:{\r\n-            names:'',\r\n+            names:'',s\r\n             members:[]\r\n         }\r\n      })\r\n \r\n"
+                },
+                {
+                    "date": 1708287096351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,17 @@\n import {User} from \"@prisma/client\"\r\n import {useRouter} from \"next/navigation\"\r\n import {useState} from 'react'\r\n import {useForm,FieldValues,SubmitHandler} from \"react-hook-form\"\r\n+import axios from \"axios\"\r\n \r\n interface GroupChatModalProps{\r\n     isOpen:boolean\r\n     onClose:()=>void\r\n     users:User[]\r\n }\r\n \r\n-const GroupChatModal:React.FC<GroupChatModalProps>=({isOpen,onClose,user})=>{\r\n+const GroupChatModal:React.FC<GroupChatModalProps>=({isOpen,onClose,users})=>{\r\n \r\n      const router= useRouter()\r\n      const[isLoading,setIsLoading]=useState(false)\r\n      const {register,\r\n"
+                },
+                {
+                    "date": 1708287118066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         errors\r\n      }}=useForm<FieldValues>\r\n      ({\r\n         defaultValues:{\r\n-            names:'',s\r\n+            names:'',\r\n             members:[]\r\n         }\r\n      })\r\n \r\n"
+                },
+                {
+                    "date": 1708287347439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,10 @@\n      const members=watch('members')\r\n \r\n      const onSubmit:SubmitHandler<FieldValues>=(data)=>{\r\n         setIsLoading(true)\r\n+        axios.post('/api/conversations',{...data,isGroup:true})\r\n+        .then(())\r\n \r\n \r\n      }\r\n return(\r\n"
+                },
+                {
+                    "date": 1708349187350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \r\n      const onSubmit:SubmitHandler<FieldValues>=(data)=>{\r\n         setIsLoading(true)\r\n         axios.post('/api/conversations',{...data,isGroup:true})\r\n-        .then(())\r\n+        .then(()=>)\r\n \r\n \r\n      }\r\n return(\r\n"
+                }
+            ],
+            "date": 1708287004692,
+            "name": "Commit-0",
+            "content": "'use client'\r\nimport {User} from \"@prisma/client\"\r\nimport {useRouter} from \"next/navigation\"\r\nimport {useState} from 'react'\r\nimport {useForm,FieldValues,Su} from \"react-hook-form\"\r\n\r\ninterface GroupChatModalProps{\r\n    isOpen:boolean\r\n    onClose:()=>void\r\n    users:User[]\r\n}\r\n\r\nconst GroupChatModal:React.FC<GroupChatModalProps>=({isOpen,onClose,user})=>{\r\n\r\n     const router= useRouter()\r\n     const[isLoading,setIsLoading]=useState(false)\r\n     const {register,\r\n        handleSubmit,\r\n        setValue,\r\n        watch,\r\n        formState:{\r\n        errors\r\n     }}=useForm<FieldValues>\r\n     ({\r\n        defaultValues:{\r\n            names:''\r\n            members:[]\r\n        }\r\n     })\r\n\r\n     const members=watch('members')\r\n\r\n     const onSubmit:SubmitHandler\r\nreturn(\r\n    <div>\r\n        Hello world\r\n        </div>\r\n)\r\n}\r\n\r\nexport default GroupChatModal"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/actions/getCurrentUser.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703083564408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703083576859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import prisma from \"\"\n\\ No newline at end of file\n+import prisma from \"@/app/libs\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703083596292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import prisma from \"@/app/libs/prismadb\"\n\\ No newline at end of file\n+import prisma from \"@/app/libs/prismadb\"\r\n+import getSession from \"./\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703083614628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n import prisma from \"@/app/libs/prismadb\"\r\n-import getSession from \"./getSe\"\n\\ No newline at end of file\n+import getSession from \"./getSession\"\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703083564408,
+            "name": "Commit-0",
+            "content": "import prisma from \"\""
+        }
+    ]
+}

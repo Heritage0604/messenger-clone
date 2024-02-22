@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/api/conversations/[conversationId]/seen/route.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708607016430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708607016430,
+            "name": "Commit-0",
+            "content": "import { NextResponse } from \"next/server\";\r\n\r\nimport getCurrentUser from \"@/app/actions/getCurrentUser\";\r\nimport { pusherServer } from '@/app/libs/pusher'\r\nimport prisma from \"@/app/libs/prismadb\";\r\n\r\ninterface IParams {\r\n  conversationId?: string;\r\n}\r\n\r\nexport async function POST(\r\n  request: Request,\r\n  { params }: { params: IParams }\r\n) {\r\n  try {\r\n    const currentUser = await getCurrentUser();\r\n    const {\r\n      conversationId\r\n    } = params;\r\n\r\n    \r\n    if (!currentUser?.id || !currentUser?.email) {\r\n      return new NextResponse('Unauthorized', { status: 401 });\r\n    }\r\n\r\n    // Find existing conversation\r\n    const conversation = await prisma.conversation.findUnique({\r\n      where: {\r\n        id: conversationId,\r\n      },\r\n      include: {\r\n        messages: {\r\n          include: {\r\n            seen: true\r\n          },\r\n        },\r\n        users: true,\r\n      },\r\n    });\r\n\r\n    if (!conversation) {\r\n      return new NextResponse('Invalid ID', { status: 400 });\r\n    }\r\n\r\n    // Find last message\r\n    const lastMessage = conversation.messages[conversation.messages.length - 1];\r\n\r\n    if (!lastMessage) {\r\n      return NextResponse.json(conversation);\r\n    }\r\n\r\n    // Update seen of last message\r\n    const updatedMessage = await prisma.message.update({\r\n      where: {\r\n        id: lastMessage.id\r\n      },\r\n      include: {\r\n        sender: true,\r\n        seen: true,\r\n      },\r\n      data: {\r\n        seen: {\r\n          connect: {\r\n            id: currentUser.id\r\n          }\r\n        }\r\n      }\r\n    });\r\n\r\n    // Update all connections with new seen\r\n    await pusherServer.trigger(currentUser.email, 'conversation:update', {\r\n      id: conversationId,\r\n      messages: [updatedMessage]\r\n    });\r\n\r\n    // If user has already seen the message, no need to go further\r\n    if (lastMessage.seenId.indexOf(currentUser.id) !== -1) {\r\n      return NextResponse.json(conversation);\r\n    }\r\n\r\n    // Update last message seen\r\n    await pusherServer.trigger(conversationId!, 'message:update', updatedMessage);\r\n\r\n    return new NextResponse('Success');\r\n  } catch (error) {\r\n    console.log(error, 'ERROR_MESSAGES_SEEN')\r\n    return new NextResponse('Error', { status: 500 });\r\n  }\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/types/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703167666479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703167675444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import {Conversation,Message,User} \n\\ No newline at end of file\n+import {Conversation,Message,User} from \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703169570758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,9 @@\n \r\n export type FullMessageType=Message & {\r\n     sender:User,\r\n     seen:User[]\r\n+}\r\n+\r\n+export type FullConversationType=Conversation & {\r\n+    user:User[\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703167666479,
+            "name": "Commit-0",
+            "content": "import {Conversation}"
+        }
+    ]
+}

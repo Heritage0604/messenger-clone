@@ -1,0 +1,74 @@
+{
+    "sourceFile": "app/components/inputs/Input.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1702719356785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702719367936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n-\r\n+'use client'\r\n import React from 'react'\r\n+import cls\r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719375518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n 'use client'\r\n import React from 'react'\r\n-import cls\r\n+import clsx from 'clsx'\r\n+import \r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719692740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n-import \r\n+import {F}\r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719698978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n-import {F}\r\n+import { FieldErrors } from 'react-hook-form'\r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719705194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n-import { FieldErrors } from 'react-hook-form'\r\n+import { FieldErrors,FieldValue } from 'react-hook-form'\r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719713263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n-import { FieldErrors,FieldValue } from 'react-hook-form'\r\n+import { FieldErrors,FieldValues,UseForm } from 'react-hook-form'\r\n \r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719728978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n 'use client'\r\n import React from 'react'\r\n import clsx from 'clsx'\r\n-import { FieldErrors,FieldValues,UseForm } from 'react-hook-form'\r\n+import { FieldErrors,FieldValues,UseFormRegister } from 'react-hook-form'\r\n \r\n+\r\n+interface\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702719734454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import clsx from 'clsx'\r\n import { FieldErrors,FieldValues,UseFormRegister } from 'react-hook-form'\r\n \r\n \r\n-interface\r\n+interfaceInputProps\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702719741777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n import clsx from 'clsx'\r\n import { FieldErrors,FieldValues,UseFormRegister } from 'react-hook-form'\r\n \r\n \r\n-interfaceInputProps\r\n+interface InputProps{\r\n+  label\r\n+}\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1702719750333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n import { FieldErrors,FieldValues,UseFormRegister } from 'react-hook-form'\r\n \r\n \r\n interface InputProps{\r\n-  label\r\n+  label:string,\r\n+  id:string\r\n }\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719757477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n \r\n \r\n interface InputProps{\r\n   label:string,\r\n-  id:string\r\n+  id:string,\r\n+  type?:\r\n }\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719763803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n \r\n interface InputProps{\r\n   label:string,\r\n   id:string,\r\n-  type?:\r\n+  type?:string,\r\n+  \r\n }\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702719771072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n interface InputProps{\r\n   label:string,\r\n   id:string,\r\n   type?:string,\r\n-  required?:boolean\r\n+  required?:boolean,\r\n }\r\n const Input = () => {\r\n   return (\r\n     <div>Input</div>\r\n"
+                },
+                {
+                    "date": 1702729401199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n        <div className=\"mt-2\">\r\n         <input id={id} type={type} disabled={disabled}\r\n          {...register(id,{required})} className={clsx(`\r\n          form-input block w-full border-0 py-1.5\r\n-          text-gray-500 shadow-sm ring-1 ring-gray-300 ring-inset\r\n+          text-gray-500 shadow-sm ring-1 ring-gray-300 ring-inset \r\n          `)} />\r\n        </div>\r\n     </div>\r\n   )\r\n"
+                }
+            ],
+            "date": 1702719356785,
+            "name": "Commit-0",
+            "content": "\r\nimport React from 'react'\r\n\r\nconst Input = () => {\r\n  return (\r\n    <div>Input</div>\r\n  )\r\n}\r\n\r\nexport default Input"
+        }
+    ]
+}

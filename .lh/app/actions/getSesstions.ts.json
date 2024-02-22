@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/actions/getSesstions.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1703082973328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703082988500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import { unstable_getServerSession } from \"next-auth\";\n\\ No newline at end of file\n+import { getServerSession } from \"next-auth\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703083003214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import { getServerSession } from \"next-auth\";\n\\ No newline at end of file\n+import { getServerSession } from \"next-auth\";\r\n+import {authO}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703083102697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n import { getServerSession } from \"next-auth\";\r\n import { authOptions } from \"../api/auth/[...nextauth]/route\";\r\n-export default async function getSession\n\\ No newline at end of file\n+export default async function getSession()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703083110187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n import { getServerSession } from \"next-auth\";\r\n import { authOptions } from \"../api/auth/[...nextauth]/route\";\r\n-export default async function getSession(){}\n\\ No newline at end of file\n+export default async function getSession(){\r\n+    return a\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703082973328,
+            "name": "Commit-0",
+            "content": "import { unstable_getServerSession } from \"next-auth\";"
+        }
+    ]
+}

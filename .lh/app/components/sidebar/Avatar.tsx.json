@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/components/sidebar/Avatar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703100504735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703100655693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+'use client'\r\n \r\n-\r\n const Avatar=()=>{\r\n     return (\r\n         <div>\r\n             Avatar\r\n"
+                },
+                {
+                    "date": 1703100672435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n 'use client'\r\n \r\n+interface AvatarProps=\r\n \r\n const Avatar=()=>{\r\n     return (\r\n         <div>\r\n"
+                },
+                {
+                    "date": 1703100698245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n 'use client'\r\n \r\n+import {Us\r\n+\r\n interface AvatarProps={\r\n     user?:User\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1703100504735,
+            "name": "Commit-0",
+            "content": "\r\n\r\nconst Avatar=()=>{\r\n    return (\r\n        <div>\r\n            Avatar\r\n        </div>\r\n    )\r\n}\r\nexport default Avatar"
+        }
+    ]
+}
