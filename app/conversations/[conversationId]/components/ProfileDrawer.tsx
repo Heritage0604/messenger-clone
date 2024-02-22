@@ -1,43 +1,47 @@
-'use client';
-
-import { Fragment, useMemo, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { IoClose, IoTrash } from 'react-icons/io5'
-import { Conversation, User } from '@prisma/client';
-import { format } from 'date-fns';
-
-import useOtherUser from '@/app/hooks/useOtherUser';
+'use client'
+import useOtherUser from '@/app/hooks/useOtherUser'
+import { Conversation,User } from '@prisma/client'
+import {format} from "date-fns"
+import { useMemo,Fragment,useState,useCallback } from 'react'
+import {Transition,Dialog} from "@headlessui/react"
+import {IoClose, IoTrash} from "react-icons/io5"
+import  Avatar from "@/app/components/sidebar/Avatar"
+import  AvatarGroup from "@/app/components/sidebar/AvatarGroup"
+import  Modal from "@/app/components/Modal"
+import ConfirmModal from './ConfirmModal'
+import{useRouter} from "next/navigation"
+import axios from 'axios'
+import { useSession } from "next-auth/react";
+import LoadingModal from "@/app/components/LoadingModal"
 import useActiveList from '@/app/hooks/useActiveList';
 
-import Avatar from '@/app/components/sidebar/Avatar';
-import AvatarGroup from '@/app/components/sidebar/AvatarGroup';
-import ConfirmModal from './ConfirmModal';
+interface ProfileDrawerProps{
+    isOpen:boolean
+    onClose:()=>void
+    data:Conversation & {
+        users:User[]
+    }
 
-interface ProfileDrawerProps {
-  isOpen: boolean;
-  onClose: () => void;
-  data: Conversation & {
-    users: User[]
-  }
 }
 
-const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
-  isOpen,
-  onClose,
-  data,
-}) => {
-  const [confirmOpen, setConfirmOpen] = useState(false);
-  const otherUser = useOtherUser(data);
-  
-  const joinedDate = useMemo(() => {
-    return format(new Date(otherUser.createdAt), 'PP');
-  }, [otherUser.createdAt]);
-  
-  const title = useMemo(() => {
-    return data.name || otherUser.name;
-  }, [data.name, otherUser.name]);
+const ProfileDrawer:React.FC<ProfileDrawerProps>=({isOpen,onClose,data})=>{
 
-  const { members } = useActiveList();
+    const session = useSession();
+    const currentUserEmail = session.data?.user?.email;
+    const otherUser=useOtherUser(data)
+    const[confirmOpen,setConfirmOpen]=useState(false)
+    const [isLoading,setIsLoading]=useState(false)
+    const router=useRouter()
+    const joinedDate=useMemo(()=>{
+        return format(new Date(otherUser.createdAt),'PP')
+    },[otherUser.createdAt])
+
+
+    const title=useMemo(()=>{
+        return data.name||otherUser.name
+    },[data.name,otherUser.name])
+
+     const { members } = useActiveList();
   const isActive = members.indexOf(otherUser?.email!) !== -1;
 
   const statusText = useMemo(() => {
@@ -48,12 +52,30 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     return isActive ? 'Active' : 'Offline'
   }, [data, isActive]);
 
-  return (
-    <>
-      <ConfirmModal 
+const handleClick=useCallback((userId:string)=>{
+       setIsLoading(true)
+        axios.post('/api/conversations',{
+            userId
+        }).then((data)=>{
+            router.push(`/conversations/${data.data.id}`)
+            setIsLoading(false)
+        })
+    },[router])
+
+
+    return(
+
+        <>
+         <ConfirmModal 
         isOpen={confirmOpen} 
         onClose={() => setConfirmOpen(false)}
       />
+
+      
+        {/* {isLoading && (
+            <LoadingModal/>
+        )} */}
+
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={onClose}>
           <Transition.Child
@@ -123,14 +145,14 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                             <div>
                               <dt 
                                 className="
-                                  text-sm 
+                                  text-md
                                   font-medium 
                                   text-gray-500 
                                   sm:w-40 
                                   sm:flex-shrink-0
                                 "
                               >
-                                Emails
+                                Group Participants
                               </dt>
                               <dd 
                                 className="
@@ -140,10 +162,19 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                   sm:col-span-2
                                 "
                               >
-                                {data.users.map((user) => user.email).join(', ')}
+                                {data.users.map((user,index)=>{
+                                    return(
+                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>
+                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):""}
+                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:""}</h2>
+                                         </div>
+                                    )
+                                })}
+                                   
                               </dd>
                             </div>
                           )}
+                          
                           {!data.isGroup && (
                             <div>
                               <dt 
@@ -211,8 +242,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
           </div>
         </Dialog>
       </Transition.Root>
-    </>
-  )
+        </>
+    )
 }
 
-export default ProfileDrawer;
+export default ProfileDrawer
