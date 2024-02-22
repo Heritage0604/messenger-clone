@@ -60,7 +60,7 @@ const handleClick=useCallback((userId:string)=>{
             router.push(`/conversations/${data.data.id}`)
             setIsLoading(false)
         })
-    },[data,router])
+    },[router])
 
 
     return(
