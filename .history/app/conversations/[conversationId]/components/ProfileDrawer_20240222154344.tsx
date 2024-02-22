@@ -162,7 +162,14 @@ const handleClick=useCallback((userId:string)=>{
                                   sm:col-span-2
                                 "
                               >
-                                {data.users.map((user) => user.email).join(', ')}
+                                {data.users.map((user,index)=>{
+                                    return(
+                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>
+                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):""}
+                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:""}</h2>
+                                         </div>
+                                    )
+                                })}
                                    
                               </dd>
                             </div>

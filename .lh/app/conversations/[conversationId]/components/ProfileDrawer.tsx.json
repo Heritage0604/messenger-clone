@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1708608988077,
@@ -52,6 +52,18 @@
                 {
                     "date": 1708612754448,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,16 @@\n                                   text-gray-900 \r\n                                   sm:col-span-2\r\n                                 \"\r\n                               >\r\n-                              {user.email}\r\n+                                {data.users.map((user,index)=>{\r\n+                                    return(\r\n+                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n+                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n+                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n+                                         </div>\r\n+                                    )\r\n+                                })}\r\n                                    \r\n                               </dd>\r\n                             </div>\r\n                           )}\r\n"
+                },
+                {
+                    "date": 1708613015063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,16 +161,9 @@\n                                   text-gray-900 \r\n                                   sm:col-span-2\r\n                                 \"\r\n                               >\r\n-                                {data.users.map((user,index)=>{\r\n-                                    return(\r\n-                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n-                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n-                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n-                                         </div>\r\n-                                    )\r\n-                                })}\r\n+                                {data.users.map((user) => user.email).join(', ')}\r\n                                    \r\n                               </dd>\r\n                             </div>\r\n                           )}\r\n"
+                },
+                {
+                    "date": 1708613024856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,16 @@\n                                   text-gray-900 \r\n                                   sm:col-span-2\r\n                                 \"\r\n                               >\r\n-                                {data.users.map((user) => user.email).join(', ')}\r\n+                                {data.users.map((user,index)=>{\r\n+                                    return(\r\n+                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n+                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n+                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n+                                         </div>\r\n+                                    )\r\n+                                })}\r\n                                    \r\n                               </dd>\r\n                             </div>\r\n                           )}\r\n"
+                },
+                {
+                    "date": 1708613036068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,16 +161,9 @@\n                                   text-gray-900 \r\n                                   sm:col-span-2\r\n                                 \"\r\n                               >\r\n-                                {data.users.map((user,index)=>{\r\n-                                    return(\r\n-                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n-                                        {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n-                                        <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n-                                         </div>\r\n-                                    )\r\n-                                })}\r\n+                                {data.users.map((user) => user.email).join(', ')}\r\n                                    \r\n                               </dd>\r\n                             </div>\r\n                           )}\r\n"
                 }
             ],
             "date": 1708608988077,
