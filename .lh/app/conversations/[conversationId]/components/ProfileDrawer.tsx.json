@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1708608988077,
@@ -20,6 +20,14 @@
                 {
                     "date": 1708609200427,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \r\n     return isActive ? 'Active' : 'Offline'\r\n   }, [data, isActive]);\r\n \r\n-const handleClick=useCallback((userIdring:st)=>{\r\n+const handleClick=useCallback((userId:string)=>{\r\n        setIsLoading(true)\r\n         axios.post('/api/conversations',{\r\n             userId\r\n         }).then((data)=>{\r\n"
+                },
+                {
+                    "date": 1708611354959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,9 @@\n                                   text-gray-900 \r\n                                   sm:col-span-2\r\n                                 \"\r\n                               >\r\n-                                {data.users.map((user)=>{\r\n+                                {data.users.map((user,index)=>{\r\n                                     return(\r\n                                       <div onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n                                         {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n                                         <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n"
+                },
+                {
+                    "date": 1708611360585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,9 +163,9 @@\n                                 \"\r\n                               >\r\n                                 {data.users.map((user,index)=>{\r\n                                     return(\r\n-                                      <div onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n+                                      <div key={index} onClick={()=>handleClick(user.id)} className='group border-b-[1px] mb-2 flex cursor-pointer items-center'>\r\n                                         {currentUserEmail!==user.email?(<Avatar user={user}/>):\"\"}\r\n                                         <h2 className=' ml-3 text-gray-400 group-hover:text-gray-500'>{currentUserEmail!==user.email?user.email:\"\"}</h2>\r\n                                          </div>\r\n                                     )\r\n"
                 }
             ],
             "date": 1708608988077,
