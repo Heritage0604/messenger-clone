@@ -140,7 +140,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                   sm:col-span-2
                                 "
                               >
-                                empty
+                                {data.users.map((user) => user.email).join(', ')}
                               </dd>
                             </div>
                           )}
